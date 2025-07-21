@@ -1,0 +1,98 @@
+/* Tooltip Styles */
+.info-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+/* .info-icon {
+    color: #ffffff;
+    background: #3584eb;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    position: relative;
+} */
+
+.info-icon {
+    display: inline-block;
+    border-style: solid;
+    border-color: #0077cc;
+    color: #0077cc;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 50%;
+
+    font-weight: bold;
+}
+
+.grid-item .tooltip {
+    position: absolute;
+    top: 10px;
+    /* Raise it higher above the icon */
+    right: 10px;
+    transform: none;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    width: 180px;
+    text-align: left;
+    white-space: normal;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.info-wrapper:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Image Title Overlay */
+.image-title {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 4px 6px;
+    font-size: 0.85rem;
+    border-radius: 3px;
+    text-align: center;
+}
+
+/* Grid Item Image Styling */
+.grid-item {
+    position: relative;
+    overflow: visible;
+    border-radius: 8px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Grid Item Hover Effects */
+.grid-item:hover,
+.grid-item:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

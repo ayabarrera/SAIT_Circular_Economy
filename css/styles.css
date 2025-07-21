@@ -1,0 +1,727 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1360px; /* Increased max-width to match the reference images */
+  margin: 0 auto;
+  padding: 0 40px; /* Increased padding on the sides for desktop view */
+}
+
+/* Header */
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-top {
+  display: flex; /* Ensure flex display for horizontal alignment */
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.logo img {
+  height: 40px;
+  width: 120px;
+  object-fit: contain;
+}
+
+.header-top-right {
+  display: flex; /* Ensure flex display */
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.info-nav {
+  display: flex; /* Ensure flex display */
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.top-nav {
+  display: flex; /* Ensure flex display for horizontal nav items */
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.top-nav .nav-item {
+  position: relative;
+}
+
+.top-nav .nav-link {
+  text-decoration: none;
+  color: #0066cc;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  transition: color 0.3s ease;
+}
+
+.top-nav .nav-link:hover {
+  color: #004499;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  color: #0066cc;
+}
+
+.header-actions {
+  display: flex; /* Ensure flex display */
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-btn {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #004499;
+}
+
+.login-btn .dropdown-arrow {
+  color: white;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.search-input {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 40px 8px 12px;
+  font-size: 14px;
+  width: 200px;
+  outline: none;
+}
+
+.search-container:focus-within {
+  border-color: #0066cc;
+}
+
+.search-icon {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  padding: 4px;
+}
+
+.search-icon:hover {
+  color: #333;
+}
+
+/* Main Navigation */
+.main-nav {
+  background-color: #8B1A2B;
+  width: 100%;
+  padding: 0;
+  min-height: 50px;
+}
+
+.main-nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.main-nav .nav-item {
+  position: relative;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-nav .nav-item:last-child {
+  border-right: none;
+}
+
+.main-nav .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.main-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main-nav .dropdown-arrow {
+  color: white;
+  font-size: 10px;
+}
+
+/* Responsive Design Adjustments for the main-nav container */
+@media (max-width: 1024px) {
+  .container { /* Apply to main container as well */
+    max-width: 960px;
+    padding: 0 20px;
+  }
+  .main-nav .container {
+    max-width: 960px;
+    padding: 0; /* Keep padding 0 for inner nav container for borders to extend */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px; /* Adjust padding for mobile */
+  }
+
+  .header-top {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .header-top-right {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .info-nav {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .top-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .header-actions {
+    order: 1;
+  }
+
+  /* Mobile menu button specific styles (from JS, but better managed in CSS) */
+  .mobile-menu-btn {
+    display: block !important; /* Ensure it shows up on mobile */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: #333;
+  }
+  
+  .main-nav {
+      position: absolute; /* Keep absolute for off-screen */
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #a94442; /* Use a color that stands out */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      flex-direction: column; /* Stack items vertically */
+      align-items: stretch; /* Stretch items to full width */
+  }
+  
+  .main-nav.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+  }
+  
+  .main-nav .container {
+      flex-direction: column; /* Ensure container also stacks vertically on mobile */
+      padding: 0; /* Remove padding from inner container on mobile */
+      max-width: 100%; /* Take full width on mobile */
+      margin: 0 auto; /* Keep centered */
+  }
+
+  .main-nav .nav-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%; /* Make nav items take full width */
+  }
+
+  .main-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .main-nav .nav-link {
+    padding: 12px 16px;
+    font-size: 13px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-section,
+  .sorting-section,
+  .oscar-section,
+  .circular-economy {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-nav .nav-link {
+    font-size: 12px;
+  }
+
+  .search-input {
+    width: 120px;
+    font-size: 12px;
+  }
+
+  .login-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background-color: #fff; /* Assuming a white background like the SAIT reference */
+  padding: 1rem 0; /* Add vertical padding above and below the breadcrumb */
+  margin-top: 6rem;
+  font-size: 0.9rem; /* Slightly smaller font size for breadcrumbs */
+  color: #666; /* Default text color for general breadcrumb text */
+  /* This ensures the background color spans full width */
+}
+
+.breadcrumb .container {
+  /* This container ensures the breadcrumb content aligns with your main content */
+  /* Remove explicit padding: 0; here to allow global .container padding to apply */
+  display: flex; /* Use flexbox to arrange items horizontally */
+  align-items: center; /* Vertically align items in the center */
+  /* The max-width and margin auto for global .container already handle the overall alignment */
+}
+
+/* ... (rest of your breadcrumb styles, .breadcrumb-link, .breadcrumb-separator, etc., should remain the same) ... */
+
+/* Responsive adjustments for the breadcrumb */
+@media (max-width: 768px) {
+    /* Keep these rules if you want the breadcrumb to wrap on smaller screens */
+    .breadcrumb .container {
+        flex-wrap: wrap; /* Allow breadcrumb items to wrap onto multiple lines */
+        justify-content: flex-start; /* Align items to the start on smaller screens */
+        /* Keep global .container padding for mobile, remove explicit padding here if any */
+    }
+    .breadcrumb-link,
+    .breadcrumb-separator,
+    .breadcrumb-current-page {
+        margin: 2px 3px; /* Reduce spacing for smaller screens */
+        font-size: 0.85rem; /* Slightly smaller font for mobile */
+    }
+}s
+
+/* Main Content */
+.main {
+  padding: 2rem 0;
+}
+
+/* Hero Section */
+.hero-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 2.7rem;
+  max-width: 30ch;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.hero-description {
+  font-size: 1.3rem;
+  max-width: 60ch;
+  color: #666;
+  line-height: 1.6;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.section-description {
+  font-size: 1rem;
+  width: 90ch;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+
+/* Sorting Guide */
+.sorting-guide {
+  margin-bottom: 3rem;
+}
+
+.sorting-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: start;
+}
+
+.sorting-grid {
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.gray-section {
+  background-color: #6c757d;
+}
+
+.green-section {
+  background-color: #28a745;
+}
+
+.blue-section {
+  background-color: #007bff;
+}
+
+.black-section {
+  background-color: #343a40;
+}
+
+.grid-title {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+/* In your styles.css */
+
+.grid-item {
+  aspect-ratio: 1; /* Keeps the grid item square */
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative; /* Keep this for the tooltip */
+
+  /* Add flexbox to center the image within the grid item */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide any overflowing parts of the image */
+}
+
+.grid-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
+  width: 100%; /* Make image fill the width of its parent (.grid-item) */
+  height: 100%; /* Make image fill the height of its parent (.grid-item) */
+  object-fit: contain; /* This is key: Scales the image to fit without cropping, maintaining aspect ratio */
+  /* object-fit: cover; would crop the image to fill the square if needed, also maintaining aspect ratio */
+  display: block; /* Remove any extra space below the image */
+}
+
+/* Info Panel */
+.info-panel {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #8B1A2B;
+}
+
+.info-panel h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.info-panel ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info-panel li {
+  padding: 0.25rem 0;
+  color: #666;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.info-panel li::before {
+  content: "•";
+  color: #8B1A2B;
+  position: absolute;
+  left: 0;
+}
+
+/* OSCAR Section */
+.oscar-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.oscar-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.oscar-content p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.oscar-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Circular Economy */
+.circular-economy {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.circular-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.circular-content p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.circular-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.circular-list li {
+  padding: 0.5rem 0;
+  color: #666;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.circular-list li::before {
+  content: "✓";
+  color: #8B1A2B;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.circular-diagram img {
+  width: 100%;
+  height: auto;
+}
+
+/* Campus Project */
+.campus-project {
+  background: linear-gradient(135deg, #004499 0%, #0066cc 100%);
+  color: white;
+  padding: 3rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.campus-project h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.campus-project p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Contact Section */
+.contact-section {
+  margin-bottom: 3rem;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.contact-card {
+  background-color: #8B1A2B;
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #004499 0%, #0066cc 100%);
+  color: white;
+  padding: 3rem 0 1rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section p {
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer-column h5 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+  text-align: center;
+  opacity: 0.8;
+}
