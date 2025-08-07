@@ -1,0 +1,451 @@
+/* Header Initial State (Based on image_20fb7a.png) */
+#main-header {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Make it sticky */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out; /* Smooth transition for header changes */
+}
+
+.header-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    /* No margin-right here, flex-grow will push elements apart naturally */
+}
+
+.logo img {
+    height: 40px; 
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Top Navigation (Info for: Alumni, Donors, etc.) */
+.top-nav {
+    display: flex; 
+    align-items: center; 
+    flex-grow: 1; 
+    margin-left: 20px;
+}
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    align-items: center;
+}
+
+.top-nav .info-for-label {
+    color: #333;
+    font-size: 12px;
+    font-weight: bold; 
+    margin-right: 5px;
+}
+
+.top-nav .dropdown {
+    position: relative;
+    margin-right: 15px; /* Space between each dropdown item */
+}
+
+.top-nav .dropdown:last-child {
+    margin-right: 0; /* No margin on the last dropdown */
+}
+
+.top-nav .dropdown > a { /* Target the main links within the dropdowns */
+    text-decoration: none;
+    color: #007bff;
+    font-size: 12px;
+    padding: 5px 0;
+    display: flex; 
+    align-items: center;
+    white-space: nowrap; 
+}
+
+/* Dropdown arrow for top-nav dropdowns */
+.top-nav .dropdown > a::after {
+    content: '\25BC'; 
+    font-size: 8px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.top-nav .dropdown > a:hover {
+    text-decoration: underline; 
+}
+
+/* Dropdown content for top-nav dropdowns */
+.top-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-top: 2px solid #8B1A2C; 
+    left: 0;
+    top: 100%;
+    padding: 5px 0;
+}
+
+.top-nav .dropdown-content a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.top-nav .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.top-nav .dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+/* Search and Login Section */
+.search-login {
+    display: flex;
+    align-items: center;
+}
+
+/* Log In Dropdown */
+.search-login .log-in-dropdown {
+    position: relative;
+    margin-right: 10px; 
+}
+
+.log-in-btn {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex; 
+    align-items: center;
+}
+
+.log-in-btn .arrow-down {
+    font-size: 8px;
+    margin-left: 5px;
+}
+
+.search-login .log-in-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-top: 2px solid #007bff; 
+    left: 0;
+    top: 100%;
+    padding: 5px 0;
+}
+
+.search-login .log-in-dropdown .dropdown-content a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.search-login .log-in-dropdown .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.search-login .log-in-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.search-box {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.search-box input {
+    border: none;
+    padding: 8px;
+    outline: none;
+    font-size: 12px;
+    flex-grow: 1;
+}
+
+.search-box button {
+    background-color: #f8f8f8;
+    border: none;
+    padding: 0 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box button img {
+    height: 16px;
+    width: 16px;
+}
+
+/* Main Navigation Bar */
+.main-nav {
+    background-color: #8B1A2C; /* SAIT red */
+    color: white;
+    padding: 0; 
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; 
+    max-width: 1200px;
+    margin: 0 auto; 
+    border-right: 1px solid rgba(255, 255, 255, 0.1); /* Right border for the last item if needed */
+}
+
+.main-nav li {
+    position: relative;
+    margin: 0; 
+    flex: 1; 
+    text-align: center; 
+    border-left: 1px solid rgba(255, 255, 255, 0.1); 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+/* Remove border from the first item if desired, as it's the leftmost */
+.main-nav li:first-child {
+    border-left: none;
+}
+
+.main-nav .dropdown > a {
+    text-decoration: none;
+    color: white;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 14px;
+    padding: 15px 10px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    height: 100%; 
+}
+
+.main-nav .dropdown > a:hover {
+    background-color: #6a1320; 
+    text-decoration: none; /* No underline on hover for squared look */
+}
+
+/* Add dropdown arrow for main-nav dropdowns */
+.main-nav .dropdown > a::after {
+    content: '\25BC';
+    font-size: 10px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* Dropdown content for main-nav */
+.main-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #8B1A2C;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0;
+    top: 100%;
+    border-top: 2px solid white;
+    text-align: left; 
+}
+
+.main-nav .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+}
+
+.main-nav .dropdown-content a:hover {
+    background-color: #6a1320; 
+}
+
+.main-nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Mobile Toggle Button */
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 15px; 
+}
+
+.menu-toggle .icon-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333; /* Dark color for initial state */
+    margin: 5px 0;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Header Scrolled State (Based on image_20fe60.png) */
+#main-header.header-scrolled {
+    background-color: #8B1A2C; /* SAIT red */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 0; /* Adjust padding for the shrunk header */
+    display: flex; /* Make header a flex container to align logo and nav */
+    align-items: center; /* Vertically center items */
+    justify-content: flex-start; /* Align contents to the left */
+    max-width: 100%; /* Ensure it spans full width */
+}
+
+#main-header.header-scrolled .header-top {
+    display: none; /* Hide the top bar when scrolled */
+}
+
+/* Logo specific adjustments for scrolled state */
+#main-header.header-scrolled .logo {
+    display: block; /* Ensure logo is visible */
+    margin-left: 20px; /* Adjust left margin to align with content */
+}
+
+#main-header.header-scrolled .logo img {
+    /* Corrected path and size for scrolled state */
+    content: url('SAIT_Logo_White.png'); /* Swap to white logo*/
+    height: 40px; /* Maintain height*/
+}
+
+#main-header.header-scrolled .main-nav {
+    background-color: transparent; /* No background on the nav itself as header now provides it */
+    padding: 0 20px; /* Adjust padding for visual balance */
+    flex-grow: 1; /* Allow the main-nav to take up remaining space */
+}
+
+#main-header.header-scrolled .main-nav ul {
+    justify-content: flex-start; /* Align main nav left when scrolled */
+}
+
+#main-header.header-scrolled .main-nav a {
+    color: white; /* Ensure nav links are white */
+}
+
+/* Responsive Design (Based on image_20feb9.png) */
+@media (max-width: 992px) {
+    /* Hide top nav items and search/login for mobile */
+    .header-top .top-nav,
+    .header-top .search-login {
+        display: none;
+    }
+
+    .header-top {
+        justify-content: space-between; /* Space out logo and menu icon */
+        padding: 10px 15px; /* Adjust padding for mobile */
+    }
+
+    .logo img {
+        height: 35px; /* Smaller logo for mobile */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the hamburger menu*/
+    }
+
+    /* Initial mobile menu styling (closed state) */
+    .main-nav {
+        display: none; /* Hide main nav initially for mobile*/
+        flex-direction: column;
+        width: 100%;
+        background-color: #8B1A2C; /* Ensure it's red */
+        padding: 0;
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    /* Open mobile menu styling */
+    .main-nav.active {
+        display: flex; /* Show when active */
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align text left */
+        width: 100%;
+        border-right: none; /* Remove border from ul */
+    }
+
+    .main-nav li {
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator for menu items */
+        border-left: none; /* No left border on mobile */
+    }
+
+    .main-nav li:last-child {
+        border-bottom: none; /* No border on last item */
+    }
+
+    .main-nav a {
+        padding: 15px 20px;
+        text-align: left;
+        justify-content: flex-start; /* Align text to left on mobile */
+    }
+
+    /* Adjustments for scrolled state on mobile */
+    #main-header.header-scrolled {
+        flex-wrap: wrap; /* Allow items to wrap if screen is very small */
+    }
+
+    #main-header.header-scrolled .header-top {
+        /* On scrolled mobile, we want to show logo and menu toggle, but hide top-nav/search-login */
+        display: flex; /* Ensure top bar is visible on scroll for mobile */
+        justify-content: space-between;
+        padding: 10px 15px; /* Keep mobile padding */
+        width: 100%; /* Ensure it spans full width */
+    }
+
+    #main-header.header-scrolled .header-top .top-nav,
+    #main-header.header-scrolled .header-top .search-login {
+        display: none; /* Explicitly hide these in scrolled mobile state */
+    }
+
+
+    #main-header.header-scrolled .logo img {
+        content: url('SAIT_Logo_White.png'); /* Still show white logo */
+        height: 35px; /* Maintain mobile logo size */
+    }
+
+    #main-header.header-scrolled .menu-toggle .icon-bar {
+        background-color: white; /* White hamburger icon on red background*/
+    }
+
+    #main-header.header-scrolled .main-nav {
+        background-color: #8B1A2C; /* Ensure it's red when open */
+        width: 100%; /* Occupy full width */
+        padding: 0;
+    }
+}

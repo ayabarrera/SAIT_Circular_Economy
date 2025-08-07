@@ -1,0 +1,57 @@
+/* Base Layout and Utility Styles */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+.section-divider {
+  width: 100%;
+  height: 2.5px;
+  background-color: #ddd;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.section-divider-card {
+  width: 100%;
+  height: 1.5px;
+  background-color: #ddd;
+  margin-bottom: 6px;
+}
+
+
+.section-divider-invisible {
+  width: 50%;
+  height: 0px;
+  background-color: #ddd;
+  margin-top: 9rem;
+  margin-bottom: 9rem;
+}
+
+/* Layout overflow defaults for key sections */
+.sorting-section,
+.sorting-grid,
+.grid-container,
+.grid-item {
+  position: relative;
+  overflow: visible;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1360px; /* Increased max-width to match the reference images */
+  margin: 0 auto;
+  padding: 0 40px; /* Increased padding on the sides for desktop view */
+}

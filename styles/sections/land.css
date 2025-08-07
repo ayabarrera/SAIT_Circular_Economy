@@ -1,0 +1,73 @@
+/* Base styles */
+.land-acknowledgement {
+    position: relative;
+    background-image: url("/images/assets/footer.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 70vh;
+    color: white;
+    padding: 3rem 3rem 1rem 6rem;   
+    overflow: hidden;
+}
+
+.land-acknowledgement::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+    z-index: 0;
+}
+
+.land-acknowledgement>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* Typography */
+.land-acknowledgement-content h2 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.land-acknowledgement-content p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    max-width: 50ch;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .campus-project {
+        padding: 2rem;
+    }
+
+    .campus-project h2 {
+        font-size: 1.5rem;
+    }
+
+    .campus-project p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .campus-project {
+        padding: 1.5rem;
+        border-radius: 6px;
+    }
+
+    .campus-project h2 {
+        font-size: 1.25rem;
+    }
+
+    .campus-project p {
+        font-size: 0.9rem;
+    }
+}

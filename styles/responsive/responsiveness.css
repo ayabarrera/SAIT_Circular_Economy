@@ -1,0 +1,65 @@
+/* Tablet view */
+@media (max-width: 1024px) {
+  .sorting-section {
+    grid-template-columns: 1fr; /* Stack left and right sections */
+    gap: 1.5rem;
+  }
+
+  .sorting-grid,
+  .info-panel {
+    height: auto;
+  }
+}
+
+/* Mobile view: 2-column grid with tighter layout */
+@media (max-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    gap: 0.75rem;
+  }
+
+  .grid-item {
+    height: 110px;
+    padding: 0.25rem;
+  }
+
+  .grid-title {
+    font-size: 1.5rem;
+  }
+
+  .info-panel {
+    padding: 1rem;
+  }
+
+  .info-panel h4 {
+    font-size: 1.25rem;
+  }
+
+  .sorting-guide {
+    padding: 0 1rem;
+  }
+}
+
+/* Very small screen: single column */
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 item per row */
+  }
+
+  .grid-item {
+    height: 100px;
+  }
+
+  .grid-title {
+    font-size: 1.25rem;
+  }
+
+  .info-panel h4 {
+    font-size: 1.15rem;
+  }
+
+  .info-panel {
+    padding: 0.75rem;
+  }
+}

@@ -1,0 +1,112 @@
+.accordion-section {
+  list-style: none;
+  padding-left: 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #fff;
+  width: 100%;
+  max-width: 960px;
+  margin-bottom: 3rem;
+  box-sizing: border-box;
+}
+
+.accordion-item + .accordion-item {
+  border-top: 1px solid #ddd;
+}
+
+.accordion-toggle {
+  background: none;
+  border: none;
+  padding: 1rem 1.5rem 1rem 3rem;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #403f3f;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-toggle::before {
+  content: '+';
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  line-height: 20px; 
+  text-align: center;
+  border: 2px solid #c00;
+  color: #c00;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion-toggle.open::before {
+  content: '−';
+}
+
+.accordion-toggle:hover {
+  background-color: #f9f9f9;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background-color: #fdfdfd;
+}
+
+.accordion-toggle.open + .accordion-content {
+  max-height: 300px;
+  padding: 1rem 1.5rem;
+}
+
+.accordion-content p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .accordion-section {
+    margin-right: 1rem;
+  }
+
+  .accordion-toggle {
+    font-size: 0.95rem;
+    padding-left: 2.5rem; 
+  }
+
+  .accordion-toggle::before {
+    left: 0.5rem;
+    width: 20px; 
+    height: 20px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion-toggle {
+    font-size: 0.9rem;
+    padding: 1rem 1rem 1rem 2.25rem;
+  }
+
+  .accordion-toggle::before {
+    width: 20px; 
+    height: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    left: 0.5rem;
+  }
+}

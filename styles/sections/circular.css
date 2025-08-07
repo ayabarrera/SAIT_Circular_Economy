@@ -1,0 +1,81 @@
+/* Circular Economy */
+.circular-economy {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  max-width: 1200px; 
+align-items: center;
+}
+
+.circular-content h2 {
+  font-size: 2.5rem; 
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.circular-content p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.circular-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.circular-list li {
+  padding: 0.5rem 0;
+  color: #666;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.circular-list li::before {
+  content: "✓";
+  color: #8B1A2B;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.circular-diagram {
+  text-align: center; 
+}
+
+.circular-diagram img {
+  width: 100%; 
+  height: auto;
+  max-width: 300px; 
+  display: block; 
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .circular-economy {
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .circular-diagram {
+    order: -1; 
+    margin-bottom: 1.5rem;
+  }
+
+  .circular-content h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .circular-content h2 {
+    font-size: 1.75rem; 
+  }
+
+  .circular-content p,
+  .circular-list li {
+    font-size: 0.9rem; 
+  }
+}

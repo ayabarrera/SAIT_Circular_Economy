@@ -1,0 +1,85 @@
+.hero-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 9rem;
+  align-items: flex-start;
+  text-align: left;
+  color: #333;
+  padding: 0;
+}
+
+
+.hero-section .hero-image {
+  display: block;
+}
+
+.hero-image img {
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* --- Styles for screens 830px and smaller (full-width background image, red overlay, white text) --- */
+@media (max-width: 1130px) {
+  .hero-section {
+    position: relative;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(rgba(64, 1, 1, 0.853), rgba(60, 7, 7, 0.649)),
+      url('/images/assets/hero1.jpeg') no-repeat center center / cover;
+      border-radius: 8px;
+  }
+
+
+  .hero-section .hero-image {
+    display: none;
+  }
+
+
+  .hero-section .h1-title,
+  .hero-section .p-description {
+    color: white;
+    z-index: 1;
+    max-width: 700px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-section .h1-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-section .p-description {
+    font-size: 1rem;
+    margin-bottom: 0;
+    width: auto;
+    padding: 0;
+    
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-section {
+    height: 300px;
+    padding: 2rem;
+  }
+
+  .hero-section .h1-title {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+  }
+
+  
+
+  .hero-section .p-description {
+    font-size: 0.9rem;
+    color: white;
+  }
+}

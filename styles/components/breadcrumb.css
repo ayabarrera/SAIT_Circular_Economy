@@ -1,0 +1,37 @@
+/* Breadcrumb */
+.breadcrumb {
+  background-color: #fff; 
+  padding: 1rem;
+  margin-top: 10rem;
+  font-size: 0.9rem;
+  color: #666; 
+}
+
+.breadcrumb .container {
+  display: flex; 
+  align-items: center; 
+ 
+}
+
+ .breadcrumb-link,
+    .breadcrumb-separator,
+    .breadcrumb-current-page {
+        margin: 2px 3px;
+        font-size: 1rem;
+    }
+
+
+@media (max-width: 768px) {
+   
+    .breadcrumb .container {
+        flex-wrap: wrap;
+        justify-content: flex-start; 
+
+    }
+    .breadcrumb-link,
+    .breadcrumb-separator,
+    .breadcrumb-current-page {
+        margin: 2px 3px;
+        font-size: 0.85rem;
+    }
+}

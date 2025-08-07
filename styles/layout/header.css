@@ -1,0 +1,136 @@
+/* Header */
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-top {
+  display: flex; /* Ensure flex display for horizontal alignment */
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.logo img {
+  height: 40px;
+  width: 120px;
+  object-fit: contain;
+}
+
+.header-top-right {
+  display: flex; /* Ensure flex display */
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.info-nav {
+  display: flex; /* Ensure flex display */
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.top-nav {
+  display: flex; /* Ensure flex display for horizontal nav items */
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.top-nav .nav-item {
+  position: relative;
+}
+
+.top-nav .nav-link {
+  text-decoration: none;
+  color: #0066cc;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  transition: color 0.3s ease;
+}
+
+.top-nav .nav-link:hover {
+  color: #004499;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  color: #0066cc;
+}
+
+.header-actions {
+  display: flex; /* Ensure flex display */
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-btn {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #004499;
+}
+
+.login-btn .dropdown-arrow {
+  color: white;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.search-input {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 40px 8px 12px;
+  font-size: 14px;
+  width: 200px;
+  outline: none;
+}
+
+.search-container:focus-within {
+  border-color: #0066cc;
+}
+
+.search-icon {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  padding: 4px;
+}
+
+.search-icon:hover {
+  color: #333;
+}

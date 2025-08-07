@@ -1,0 +1,77 @@
+/* OSCAR Section */
+.oscar-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: 1200px; 
+  align-items: center;
+  margin: 0 auto 9rem;
+    /* Added border */
+  border: 3px solid #8B1A2C;
+  padding: 4rem;
+  border-radius: 8px; /* Optional: adds rounded corners to the border */
+}
+
+.oscar-content {
+  padding-right: 1rem; 
+}
+
+.oscar-content h2 {
+  font-size: 2.5rem; 
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.oscar-content p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.oscar-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block; /
+}
+
+
+@media (max-width: 768px) {
+  .oscar-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .oscar-content {
+    padding-right: 0;
+    order: 1;
+  }
+
+  .oscar-image {
+    order: 0;
+  }
+
+  .oscar-content h2 {
+    font-size: 2rem;
+  }
+
+  /* New rule for buttons on responsive screens */
+  .my-button {
+    margin-bottom: 1rem;
+  }
+
+  .oscar-content p {
+    font-size: 1rem; /* Adjusting font size for better readability on tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .oscar-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .oscar-content p {
+    font-size: 0.9rem;
+  }
+}

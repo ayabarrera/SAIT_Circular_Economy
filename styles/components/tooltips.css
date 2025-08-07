@@ -1,0 +1,108 @@
+/* ============================= */
+/* Grid Item Structure & Styling */
+/* ============================= */
+
+.grid-item {
+    position: relative;
+    border-radius: 8px;
+    /* ENSURE THIS IS VISIBLE! If an ancestor has overflow: hidden, this won't help. */
+    overflow: visible;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 1; /* Base z-index for the grid item */
+    /* Add a transform property here to ensure it creates a stacking context even when not hovered.
+       This can sometimes help with z-index issues. */
+    transform: translateZ(0); /* Creates a new stacking context */
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Image hover effect */
+.grid-item:hover,
+.grid-item:focus-within {
+    transform: translateY(-2px) translateZ(1px); /* Bring it slightly forward on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2; /* Bring hovered/focused item slightly above others if needed */
+}
+
+/* Image title (overlay text at bottom of image) */
+.image-title {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 4px 6px;
+    font-size: 0.85rem;
+    border-radius: 3px;
+    text-align: center;
+}
+
+/* ==================== */
+/* Tooltip Components */
+/* ==================== */
+
+/* Icon Container */
+.info-wrapper {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    /* The z-index here is crucial for the tooltip to appear on top of the grid-item */
+    z-index: 1000; /* Increased significantly to ensure it's on top of everything else */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+}
+
+/* Icon itself */
+.info-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid #0077cc;
+    color: #0077cc;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: help;
+    z-index: 1001; /* Higher than info-wrapper and tooltip to ensure icon is always on top */
+    flex-shrink: 0;
+}
+
+/* Tooltip box */
+.tooltip {
+    background-color: rgba(51, 51, 51, 0.95);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    width: 180px;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 28px; /* Position below the info-icon */
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    pointer-events: none;
+    z-index: 1000; /* Needs to be high enough to clear the grid item */
+}
+
+/* Show tooltip on hover/focus */
+.info-wrapper:hover .tooltip,
+.info-wrapper:focus-within .tooltip {
+    opacity: 1;
+    visibility: visible;
+}

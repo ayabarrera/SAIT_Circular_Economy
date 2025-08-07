@@ -1,0 +1,70 @@
+/* Button Components */
+.cta-button {
+  background-color: #8B1A2B;
+  color: #F6F7F9;
+  border: none;
+  height: 56px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #DA291C;
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+.secondary-button {
+  background-color: #F6F7F9;
+  color: #005EB8;
+  border: 2px solid #F6F7F9; 
+  height: 50px;
+  padding: 8px 28px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #F6F7F9; 
+  color: #F6F7F9;
+}
+
+
+.third-button {
+  background-color: transparent;
+  color: #F6F7F9;
+  border: 2px solid #F6F7F9; 
+  height: 50px;
+  padding: 8px 28px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.third-button:hover {
+  background-color: #DA291C;
+  border: 2px solid #DA291C; 
+  color: #F6F7F9;
+}
+
+.third-button span {
+  margin-left: 0.5rem;
+  color: #DA291C;
+  font-weight: bold;
+}
+
+.third-button:hover span {
+  color: white;
+}

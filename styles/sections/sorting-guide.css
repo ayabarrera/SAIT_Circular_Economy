@@ -1,0 +1,112 @@
+/* Sorting Guide */
+.sorting-guide {
+  margin-bottom: 3rem;
+}
+
+.sorting-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: start;
+}
+
+.sorting-grid {
+  padding: 1.5rem;
+  border-radius: 8px;
+  height: 495px;
+}
+
+/* Section Colors*/
+.gray-section {
+  background-color: #6c757d;
+}
+
+.green-section {
+  background-color: #28a745;
+}
+
+.blue-section {
+  background-color: #007bff;
+}
+
+.black-section {
+  background-color: #343a40;
+}
+
+.grid-title {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  min-height: 150px;
+}
+
+.grid-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  object-position: bottom; /* If the important part is usually at the bottom */
+  display: block;
+}
+
+/* Info Panel */
+.info-panel {
+  background-color: #dedfe071;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #8B1A2B;
+  height: 495px;
+}
+
+.info-panel h4 {
+  font-size: 28px;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.info-panel ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info-panel li {
+  padding: 0.25rem 0;
+  font-size: 16px;
+  color: #666;
+  position: relative;
+  padding-left: 1rem;
+}
+
+
+.info-panel li::before {
+  content: "•";
+  color: #8B1A2B;
+  position: absolute;
+  left: 0;
+}
+
+
