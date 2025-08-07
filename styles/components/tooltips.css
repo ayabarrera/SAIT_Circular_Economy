@@ -1,17 +1,14 @@
-/* ============================= */
+
 /* Grid Item Structure & Styling */
-/* ============================= */
 
 .grid-item {
     position: relative;
     border-radius: 8px;
-    /* ENSURE THIS IS VISIBLE! If an ancestor has overflow: hidden, this won't help. */
+  
     overflow: visible;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    z-index: 1; /* Base z-index for the grid item */
-    /* Add a transform property here to ensure it creates a stacking context even when not hovered.
-       This can sometimes help with z-index issues. */
-    transform: translateZ(0); /* Creates a new stacking context */
+    z-index: 1;
+    transform: translateZ(0);
 }
 
 .grid-item img {
@@ -25,15 +22,15 @@
 /* Image hover effect */
 .grid-item:hover,
 .grid-item:focus-within {
-    transform: translateY(-2px) translateZ(1px); /* Bring it slightly forward on hover */
+    transform: translateY(-2px) translateZ(1px); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 2; /* Bring hovered/focused item slightly above others if needed */
+    z-index: 2; 
 }
 
 /* Image title (overlay text at bottom of image) */
 .image-title {
     position: absolute;
-    bottom: 4px;
+    bottom: 0px;
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.6);
@@ -44,9 +41,7 @@
     text-align: center;
 }
 
-/* ==================== */
 /* Tooltip Components */
-/* ==================== */
 
 /* Icon Container */
 .info-wrapper {

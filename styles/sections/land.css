@@ -5,10 +5,13 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 70vh;
+    min-height: 70vh; /* Changed from fixed height to allow flexible height */
     color: white;
     padding: 3rem 3rem 1rem 6rem;   
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .land-acknowledgement::before {
@@ -22,7 +25,7 @@
     z-index: 0;
 }
 
-.land-acknowledgement>* {
+.land-acknowledgement > * {
     position: relative;
     z-index: 1;
 }
@@ -42,32 +45,36 @@
     opacity: 0.9;
 }
 
-/* Responsive styles */
+/* Responsive styles for tablets */
 @media (max-width: 768px) {
-    .campus-project {
+    .land-acknowledgement {
         padding: 2rem;
+        min-height: auto;
+        text-align: center;
+        align-items: center;
     }
 
-    .campus-project h2 {
+    .land-acknowledgement-content h2 {
         font-size: 1.5rem;
     }
 
-    .campus-project p {
-        font-size: 0.95rem;
+    .land-acknowledgement-content p {
+        font-size: 1rem;
+        max-width: 100%;
     }
 }
 
+/* Responsive styles for small screens (phones) */
 @media (max-width: 480px) {
-    .campus-project {
-        padding: 1.5rem;
-        border-radius: 6px;
+    .land-acknowledgement {
+        padding: 1.5rem 1rem;
     }
 
-    .campus-project h2 {
+    .land-acknowledgement-content h2 {
         font-size: 1.25rem;
     }
 
-    .campus-project p {
-        font-size: 0.9rem;
+    .land-acknowledgement-content p {
+        font-size: 0.95rem;
     }
 }

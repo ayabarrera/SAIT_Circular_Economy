@@ -47,13 +47,13 @@
 }
 
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: white;
   border-radius: 4px;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
   display: flex;
-  padding: 5px;
+  /* padding: 5px; */
   justify-content: center;
   align-items: center;
   height: 180px;
@@ -68,8 +68,8 @@
 .grid-item img {
   width: 100%; 
   height: 100%; 
-  object-fit: cover; 
-  object-position: bottom; /* If the important part is usually at the bottom */
+  object-fit: contain; 
+  object-position: initial;
   display: block;
 }
 

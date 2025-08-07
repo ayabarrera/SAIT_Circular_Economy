@@ -20,11 +20,9 @@
   border-radius: 8px;
 }
 
-/* --- Styles for screens 830px and smaller (full-width background image, red overlay, white text) --- */
 @media (max-width: 1130px) {
   .hero-section {
     position: relative;
-    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,14 +30,15 @@
     padding: 2rem;
     background: linear-gradient(rgba(64, 1, 1, 0.853), rgba(60, 7, 7, 0.649)),
       url('/images/assets/hero1.jpeg') no-repeat center center / cover;
-      border-radius: 8px;
+    border-radius: 8px;
+    min-height: 400px; 
+    height: auto;
+    text-align: center;
   }
-
 
   .hero-section .hero-image {
     display: none;
   }
-
 
   .hero-section .h1-title,
   .hero-section .p-description {
@@ -47,39 +46,35 @@
     z-index: 1;
     max-width: 700px;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
 
   .hero-section .h1-title {
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
     margin-bottom: 1rem;
   }
 
   .hero-section .p-description {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
     margin-bottom: 0;
-    width: auto;
     padding: 0;
-    
   }
 }
 
 @media (max-width: 500px) {
   .hero-section {
-    height: 300px;
-    padding: 2rem;
+    padding: 2rem 1rem;
+    min-height: 300px;
+    height: auto;
   }
 
   .hero-section .h1-title {
-    font-size: 1.8rem;
-    margin-top: 3rem;
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+    margin-top: 2rem;
   }
 
-  
-
   .hero-section .p-description {
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 4vw, 0.9rem);
     color: white;
   }
 }
