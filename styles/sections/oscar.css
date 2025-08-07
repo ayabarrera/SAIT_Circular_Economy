@@ -5,11 +5,11 @@
   gap: 2rem;
   max-width: 1200px; 
   align-items: center;
-  margin: 0 auto 9rem;
+  margin: 3 auto 9rem;
     /* Added border */
   border: 3px solid #8B1A2C;
-  padding: 4rem;
-  border-radius: 8px; /* Optional: adds rounded corners to the border */
+  padding: 3rem;
+  border-radius: 8px;
 }
 
 .oscar-content {

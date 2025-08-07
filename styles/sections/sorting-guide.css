@@ -1,6 +1,7 @@
 /* Sorting Guide */
 .sorting-guide {
   margin-bottom: 3rem;
+  margin-top: 9rem;
 }
 
 .sorting-section {
@@ -14,7 +15,7 @@
 .sorting-grid {
   padding: 1.5rem;
   border-radius: 8px;
-  height: 495px;
+  height: 550px;
 }
 
 /* Section Colors*/
@@ -79,18 +80,18 @@
   padding: 1.5rem;
   border-radius: 8px;
   border-left: 4px solid #8B1A2B;
-  height: 495px;
+  height: 550px;
 }
 
 .info-panel h4 {
-  font-size: 28px;
-  margin-bottom: 1rem;
+  font-size: 26px;
   color: #333;
 }
 
 .info-panel ul {
   list-style: none;
   padding-left: 0;
+  margin-bottom: 1rem;
 }
 
 .info-panel li {

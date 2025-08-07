@@ -28,6 +28,7 @@
 @import './styles/sections/oscar.css';
 @import './styles/sections/sorting-guide.css';
 @import './styles/sections/land.css';
+@import './styles/sections/intro.css';
 
 /* Responsive */
 @import './styles/responsive/responsiveness.css';
