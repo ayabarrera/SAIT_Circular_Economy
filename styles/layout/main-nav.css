@@ -434,8 +434,8 @@
 
 
     #main-header.header-scrolled .logo img {
-        content: url('SAIT_Logo_White.png'); /* Still show white logo */
-        height: 35px; /* Maintain mobile logo size */
+        content: url('/images/assets/logo_white.png'); /* Still show white logo */
+        height: 60px; /* Maintain mobile logo size */
     }
 
     #main-header.header-scrolled .menu-toggle .icon-bar {
