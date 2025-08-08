@@ -316,35 +316,34 @@
 
 /* Header Scrolled State (Based on image_20fe60.png) */
 #main-header.header-scrolled {
-    background-color: #8B1A2C; /* SAIT red */
+    background-color: #8B1A2C;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    padding: 10px 0; /* Adjust padding for the shrunk header */
-    display: flex; /* Make header a flex container to align logo and nav */
-    align-items: center; /* Vertically center items */
-    justify-content: flex-start; /* Align contents to the left */
-    max-width: 100%; /* Ensure it spans full width */
+    padding: 10px 0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
+    max-width: 100%; 
 }
 
 #main-header.header-scrolled .header-top {
-    display: none; /* Hide the top bar when scrolled */
+    display: none; 
 }
 
 /* Logo specific adjustments for scrolled state */
 #main-header.header-scrolled .logo {
-    display: block; /* Ensure logo is visible */
-    margin-left: 20px; /* Adjust left margin to align with content */
+    display: block; 
+    margin-left: 20px; 
 }
 
 #main-header.header-scrolled .logo img {
-    /* Corrected path and size for scrolled state */
-    content: url('SAIT_Logo_White.png'); /* Swap to white logo*/
-    height: 40px; /* Maintain height*/
+    content: url('/images/assets/logo_white.png'); 
+    height: 40px; 
 }
 
 #main-header.header-scrolled .main-nav {
-    background-color: transparent; /* No background on the nav itself as header now provides it */
-    padding: 0 20px; /* Adjust padding for visual balance */
-    flex-grow: 1; /* Allow the main-nav to take up remaining space */
+    background-color: transparent; 
+    padding: 0 20px; 
+    flex-grow: 1; 
 }
 
 #main-header.header-scrolled .main-nav ul {
