@@ -18,6 +18,14 @@
   height: 550px;
 }
 
+.grid-header {
+    display: flex;
+    align-items: center; /* vertical center */
+    gap: 10px; /* space between icon and title */
+    margin-bottom: 1rem; /* space before grid items */
+}
+
+
 /* Section Colors*/
 .gray-section {
   background-color: #6c757d;
@@ -38,7 +46,6 @@
 .grid-title {
   color: white;
   font-size: 28px;
-  margin-bottom: 1rem;
 }
 
 .grid-container {
